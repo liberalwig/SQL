@@ -38,7 +38,7 @@ and  department_id = 100;
 --from/where/group by/having/select/order by을 이 순서로 잘 운용해야 하고 java에서 합 구하려 하고 그러면 안됨
 
 
---Case~End문: 간단한if문 형식
+--Case~then End문: 간단한if문 형식
 select employee_id,
         first_name,
         salary,
