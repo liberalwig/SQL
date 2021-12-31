@@ -1,4 +1,4 @@
---2021.12.20(월)수업-2021.12.31(금)16:20-23:00/EQUIjoin, LeftRightFullOuterJoin, SelfJoin
+--2021.12.20(월)수업-2021.12.31(금)16:20-23:04/EQUIjoin, LeftRightFullOuterJoin, SelfJoin
 
 /*EQUI Join[등가 join]: employees테이블에 departments테이블의 일부를 가져오고 싶을 경우 
 <1>양 테이블 모두에 있는 row에만 적용 가능-null값이 있는 시엔 가져올 수 없음
