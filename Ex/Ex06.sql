@@ -1,4 +1,4 @@
---2021.12.20(월)수업-2021.12.31(금)16:20-21:00/EQUIjoin, LeftRightFullOuterJoin, SelfJoin
+--2021.12.20(월)수업-2021.12.31(금)16:20-23:00/EQUIjoin, LeftRightFullOuterJoin, SelfJoin
 
 /*EQUI Join[등가 join]: employees테이블에 departments테이블의 일부를 가져오고 싶을 경우 
 <1>양 테이블 모두에 있는 row에만 적용 가능-null값이 있는 시엔 가져올 수 없음
@@ -120,3 +120,12 @@ select em.employee_id, --참고로 관계형데이터베이스에서 self-join�
         man.email
 from employees em, employees man
 where em.manager_id = man.employee_id;
+
+--아무 상관 없는 급여와 location_id가 동일할 경우라 할 지라도, 급여가 3100인데 location_id가 3100이면 아래처럼 출력이 됨.
+select em.employee_id,
+        em.first_name,
+        em.salary,
+        lo.location_id,
+        lo.city
+from employees em, locations lo
+where em.salary = lo.location_id;
