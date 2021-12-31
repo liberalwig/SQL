@@ -1,4 +1,4 @@
-//2021.12.15(수) 기본 select문과 단일행 함수: select/form절, where절, order by절, 단일행 함수
+//2021.12.15(수) 기본 select문과 단일행 함수: select/form절, where절, order by절, 단일행 함수 
 
 /*
 select 문
