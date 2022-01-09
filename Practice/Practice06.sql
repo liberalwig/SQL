@@ -1,4 +1,4 @@
---Practice06: 2022.01.09(일)19:38
+--Practice06: 2022.01.09(일)19:38 
 
 --1. author table 생성
 create table author(
