@@ -107,7 +107,7 @@ values(3, '기안84', '웹툰 작가');
 insert into author (author_id, author_name)
 values(2, '이문열');
 
-select * from author;
+select * from author; 
 
 --2021.12.23(목)13:36수업-2022.01.06(목)03:45
 --update: 작가 테이블 정보 수정
@@ -118,9 +118,53 @@ set author_name = '김경리',
 where author_id = 1; --and,or 둘다 사용이 가능하며 where절은 PK값 넣으면 실수 없음
 
 --delete: 작가 테이블 정보 삭제. 한 row전체를 삭제, row중 한 칼럼의 데이터를 삭제(=null값이 되게 함)하는 건 update임
---■ 조건을 만족하는 레코드를 삭제
+--■ 조건을 만족하는 레코드를 삭제: where절 없음
 delete from author;
 
 delete from author --delete from author까지만 입력할 시 전체가 다 지워지니 주의
 where author_id = 1;
+
+
+
+
+--2021.12.23(목)14:00수업-2022.01.10(일)17:25
+/***************************
+            SEQUENCE
+****************************/   
+--은행 대기 번호표 출력 기계 만드는 회사처럼
+create sequence seq_author_id
+increment by 1 --몇 씩 올라갈 건가
+start with 1 --몇에서 시작할 건가
+nocache; --cache가 없어도 껐다 켜도 하나 씩 올라간다(?)
+
+update author
+set author_name = '이문열',
+    author_desc = '<삼국지> 작가'
+where author_id = 2; --and,or 둘다 사용이 가능하며 where절은 PK값 넣으면 실수 없음
+
+update author
+set author_name = '강풀'
+    author_desc = '웹툰 작가'
+where author_id = 3;
+
+--시퀀스 조회
+select * from user_sequences;
+
+--현재 시퀀스 조회
+select seq_author_id.currval
+from dual;
+
+--다음 시퀀스 조회
+select seq_author_id.nextval
+from dual;
+
+--시퀀스 삭제
+drop sequence seq_author_id;
+
+
+/***************************
+        SYSDATE: 현재시간 입력
+****************************/  
+insert into board
+values(1, '게시판 제목', '본문 내용', 'Sysdate);
 
